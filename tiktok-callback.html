@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TikTok Authorization | Game Radar Studio</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="badge">TikTok Authorization</div>
+      <h1>Returning to local studio...</h1>
+      <p>If nothing happens, make sure Game Radar Studio is open on your computer.</p>
+      <p><a id="manualLink" href="#">Open local callback manually</a></p>
+    </section>
+  </main>
+  <script>
+    const localCallback = "http://localhost:8787/api/tiktok/callback" + window.location.search;
+    document.getElementById("manualLink").href = localCallback;
+    window.location.replace(localCallback);
+  </script>
+</body>
+</html>
